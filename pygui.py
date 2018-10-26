@@ -9,7 +9,7 @@ class GUi(QMainWindow):
     def initUI(self):
         self.setWindowTitle('窗口')
         self.statusBar().showMessage("文本栏状态")
-        self.resize(400,100)
+        self.resize(400,300)
         self.add_menu_and_statu()
         self.add_position_layout()
     def add_menu_and_statu(self):
@@ -40,8 +40,13 @@ class GUi(QMainWindow):
         file_menu.addAction(exit_action)
 
     def add_position_layout(self):
-        label = QLabel("第一个标签",self)
-        label.move(10,20)
+        mbar_height = self.menuBar().height()
+        label_1 = QLabel("第一个标签",self)
+        label_1.move(10,mbar_height)
+
+        #第二个标签
+        label_2 = QLabel("第二个标签",self)
+        label_2.move(10,mbar_height*2)
 
 
 
