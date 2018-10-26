@@ -47,6 +47,13 @@ class GUi(QMainWindow):
         #第二个标签
         label_2 = QLabel("第二个标签",self)
         label_2.move(10,mbar_height*2)
+        #第一个按钮
+        button_1 = QPushButton("按钮1",self)
+        button_1.move(label_1.width(),mbar_height)
+
+        # 第二个按钮
+        button_2 = QPushButton("按钮2",self)
+        button_2.move(label_2.width(),mbar_height*2)
 
 
 
