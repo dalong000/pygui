@@ -17,10 +17,10 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>-4</x>
-      <y>-1</y>
-      <width>401</width>
-      <height>261</height>
+      <x>0</x>
+      <y>0</y>
+      <width>301</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -33,8 +33,8 @@
      <widget class="QDial" name="dial">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>70</y>
+        <x>20</x>
+        <y>20</y>
         <width>91</width>
         <height>71</height>
        </rect>
@@ -46,6 +46,32 @@
       <string>Tab 2</string>
      </attribute>
     </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>210</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>标签</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>200</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -103,22 +129,5 @@
   </action>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>actiontuichu</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>199</x>
-     <y>149</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
