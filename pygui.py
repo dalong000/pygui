@@ -11,7 +11,7 @@ class GUi(QMainWindow):
         self.statusBar().showMessage("文本栏状态")
         self.resize(400,300)
         self.add_menu_and_statu()
-        self.add_position_layout()
+        self.horizontal_vertical_box_layout()
     def add_menu_and_statu(self):
         self.statusBar().showMessage("文本状态栏")
         #创建一个菜单栏
@@ -39,21 +39,38 @@ class GUi(QMainWindow):
         #添加退出行为到菜单上
         file_menu.addAction(exit_action)
 
-    def add_position_layout(self):
-        mbar_height = self.menuBar().height()
+    def horizontal_vertical_box_layout(self):
+        #创建两个标签
         label_1 = QLabel("第一个标签",self)
-        label_1.move(10,mbar_height)
-
-        #第二个标签
         label_2 = QLabel("第二个标签",self)
-        label_2.move(10,mbar_height*2)
-        #第一个按钮
-        button_1 = QPushButton("按钮1",self)
-        button_1.move(label_1.width(),mbar_height)
 
-        # 第二个按钮
+        #创建两个按钮
+        button_1 = QPushButton("按钮1",self)
         button_2 = QPushButton("按钮2",self)
-        button_2.move(label_2.width(),mbar_height*2)
+
+        #创建两个水平盒子
+        hbox_1 = QHBoxLayout()
+        hbox_2 = QHBoxLayout()
+
+        #在水平盒子1中添加标签一和按钮一
+        hbox_1.addWidget(label_1)
+        hbox_1.addWidget(button_1)
+
+        #在水平盒子2中添加标签二和按钮二
+        hbox_2.addWidget(label_2)
+        hbox_2.addWidget(button_2)
+
+        #创建一个垂直盒子，包含两个水平盒子
+        vbox = QVBoxLayout()
+        vbox.addLayout(hbox_1)
+        vbox.addLayout(hbox_2)
+
+        #创建一个窗口部件，设置布局为垂直盒子
+        layout_widget = QWidget()
+        layout_widget.setLayout(vbox)
+        self.setCentralWidget(layout_widget)
+
+
 
 
 
