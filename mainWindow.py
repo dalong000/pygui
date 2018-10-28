@@ -8,7 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from GUI import dialog
+#from GUI import dialog
 
 import sys
 
